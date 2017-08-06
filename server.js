@@ -6,7 +6,6 @@ var app = express();
 app.use(morgan('combined'));
 
 
-
 var content ={
     title:'Article One | Lohith S',
     heading: 'Article One',
@@ -56,6 +55,7 @@ var htmlTemplate=`
 `;
 return htmlTemplate;
 }
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
