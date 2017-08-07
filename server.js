@@ -6,7 +6,6 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = { 
-    
      'article-one' : {
        title : 'Article One | Lohith S',
         heading : 'Article One',
@@ -89,7 +88,7 @@ app.get('/', function (req, res) {
 app.get('/articleName', function (req, res) {
   //articleName == article-one
   //articles(articleName) == {} content for article one
-  var articleName = res.parans.articleName;
+  var articleName = res.params.articleName;
   res.send(createTemplate(articles[articleName]));
 });
 
