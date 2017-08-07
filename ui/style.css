@@ -31,7 +31,6 @@ body {
 footer{
 	background-color: #6991ac;
 	width: 100%;
-	height:auto;
 }
 .social{
 	list-style-type: none;
@@ -40,4 +39,10 @@ footer{
 }
 .social li{
 	display: inline;
+}
+.social i{
+	font-size: 460%;
+	margin: 1%;
+	padding: 5% 5% 5% 5%;
+	color: #c3d7df;
 }
