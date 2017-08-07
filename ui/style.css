@@ -54,6 +54,15 @@ footer{
 .social li{
 	display: inline;
 }
+.social {
+    max-width: 1012px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
 .social i{
 	font-size: 260%;
 	margin: 0;
