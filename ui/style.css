@@ -43,7 +43,16 @@ footer{
 	list-style-type: none;
 	text-align:center; 
 	height :50;
+	position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #586069;
+    border-top: 1px solid #eaecef;
 }
+
 .social li{
 	display: inline;
 }
