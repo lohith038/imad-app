@@ -42,6 +42,7 @@ footer{
 .social{
 	list-style-type: none;
 	text-align:center; 
+	height :50;
 }
 .social li{
 	display: inline;
