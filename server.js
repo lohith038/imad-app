@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var articles = { 
     
-    var articleOne : {
+     articleOne : {
        title : 'Article One | Lohith S',
         heading : 'Article One',
         date : 'Aug 06 2017',
@@ -22,7 +22,7 @@ var articles = {
                     This is the content for my first article.This is the content for my first article.
                 </p>`
    },        
-    var articleTwo:{
+     articleTwo:{
         title:'Article Two | Lohith S',
         heading: 'Article Two',
         date:'Aug 07 2017',
@@ -31,8 +31,8 @@ var articles = {
                     This is the content for my second article.This is the content for my second article.
                 </p>`
         
-    };
-    var articleThree :{
+    },
+     articleThree :{
         title:'Article Three | Lohith S',
         heading: 'Article Three',
         date:'Aug 08 2017',
@@ -40,7 +40,7 @@ var articles = {
                 <p>
                     This is the content for my third article.
                 </p>`
-    };
+    }
 };
 
 
@@ -108,9 +108,9 @@ app.get('/ui/madi.png', function (req, res) {
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
+// Use 8080 only for local development if you already have apache running on 80
 
-
-var port = 8080;// Use 8080 only for local development if you already have apache running on 80
+var port = 80;
 app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
