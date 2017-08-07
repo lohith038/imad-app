@@ -19,13 +19,7 @@ body {
 .img-medium {
     height: 200px;
 }
-p{
-	font-size: 100%;
-	line-height: 50%;
-	padding: 3%;
-	text-indent: 2%;
-	text-align: center;
-}	
+
 .container{
     max-width:800px;
     margin: 0 auto;
@@ -40,6 +34,8 @@ footer{
 	height:auto;
 }
 .social{
+	list-style-type: none;
+	text-align:center; 
 	height :50;
 	position: relative;
     padding-top: 40px;
@@ -51,21 +47,3 @@ footer{
     border-top: 1px solid #eaecef;
 }
 
-.social li{
-	display: inline;
-}
-.social {
-    max-width: 1012px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-* {
-    box-sizing: border-box;
-}
-.social i{
-	font-size: 260%;
-	margin: 0;
-	padding: 5% 5% 5% 5%;
-	color: #c3d7df;
-}
