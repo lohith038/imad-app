@@ -35,7 +35,8 @@ footer{
 }
 .social{
 	list-style-type: none;
-	text-align:center; 
+	text-align:center;
+	display: inline-block;
 	height :50;
 	position: relative;
     padding-top: 40px;
