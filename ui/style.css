@@ -19,7 +19,13 @@ body {
 .img-medium {
     height: 200px;
 }
-
+p{
+	font-size: 160%;
+	line-height: 150%;
+	padding: 3%;
+	text-indent: 2%;
+	text-align: center;
+}	
 .container{
     max-width:800px;
     margin: 0 auto;
