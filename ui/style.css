@@ -36,7 +36,6 @@ footer{
 .social{
 	list-style-type: none;
 	text-align:center;
-	display: inline-block;
 	height :50;
 	position: relative;
     padding-top: 40px;
@@ -47,4 +46,6 @@ footer{
     color: #586069;
     border-top: 1px solid #eaecef;
 }
-
+.social li{
+	display: inline;
+}
