@@ -1,7 +1,6 @@
 // Counter code
 var button =document.getElementById('counter');
 
-
 button.onclick = function(){
     
     //make a request to the counter endpoint
@@ -9,7 +8,7 @@ button.onclick = function(){
     
     //capture the response and storew it in a variable
     request.onreadystatechange = function(){
-        if(request.readtstate === XMLHttpRequest.DONE){
+        if(request.readystate === XMLHttpRequest.DONE){
             //take some action
             if(response.status === 200){
                 var counter= request.responseText;
