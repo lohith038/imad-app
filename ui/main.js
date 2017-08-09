@@ -19,4 +19,8 @@ button.onclick = function(){
         }
         //not done yet
     };
+    
+    // make the request
+    request.open('GET','http://lohith038.imad.hasura-app.io/counter',true);
+    requesat.send(null);
 };
