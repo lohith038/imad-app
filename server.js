@@ -6,6 +6,32 @@ var path = require('path');
 var app=express();
 app.use(morgan('combined'));
 
+var articleOne={
+    title:'Article One | Lohith S',
+    heading:'Article One',
+    date:'Sept 01 2017',
+    content:`
+    <p>
+    This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article. 
+    </p>
+    <p>
+    This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article. 
+    </p>
+    <p>
+    This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article. 
+    </p> `
+};
+var htmlTemplate= `
+<html>
+ <head>
+   <title>
+      ${title}
+   </title>
+   <metaname="viewreport" content="width-device-width, initial-scale=1"/>
+   <link href="/ui/style.css" rel="stylesheet" />
+
+`;
+
 app.get('/',function (req, res){
    res.sendFile(path.join(__dirname,'ui','index.html')); 
 });
