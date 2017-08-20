@@ -21,6 +21,13 @@ var articleOne={
     This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article. 
     </p> `
 };
+
+function createTemplate(data){
+    var title = data.title;
+    var heading= data.heading;
+    var date= data.date;
+    var content= data.content;
+
 var htmlTemplate= `
 <html>
  <head>
@@ -50,7 +57,8 @@ var htmlTemplate= `
  </html>
 
 `;
-
+return htmlTemplate;
+}
 app.get('/',function (req, res){
    res.sendFile(path.join(__dirname,'ui','index.html')); 
 });
