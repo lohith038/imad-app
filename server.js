@@ -6,6 +6,7 @@ var path = require('path');
 var app=express();
 app.use(morgan('combined'));
 
+var articles={
 var articleOne={
     title:'Article One | Lohith S',
     heading:'Article One',
@@ -20,6 +21,25 @@ var articleOne={
     <p>
     This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article. 
     </p> `
+},
+var articleTwo={
+    title:'Article Two | Lohith S',
+    heading:'Article Two',
+    date:'Sept 01 2017',
+    content:`
+    <p>
+    This is the content of my second article.This is the content of my second article.This is the content of my second article.This is the content of my second article. 
+    </p> `
+},
+var articleThree={
+    title:'Article Three | Lohith S',
+    heading:'Article Three',
+    date:'Sept 03 2017',
+    content:`
+    <p>
+    This is the content of my third article.
+    </p>    `
+},
 };
 
 function createTemplate(data){
@@ -59,6 +79,7 @@ var htmlTemplate= `
 `;
 return htmlTemplate;
 }
+
 app.get('/',function (req, res){
    res.sendFile(path.join(__dirname,'ui','index.html')); 
 });
