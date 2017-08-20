@@ -1,42 +1,25 @@
-// Counter code
-var button =document.getElementById('counter');
+app.get('/',function (req, res){
+   res.sendFile(path.join(__dirname,'ui','index.html')); 
+});
 
-button.onclick = function(){
-    
-    //make a request to the counter endpoint
-    var request = new XMLHttpRequest();
-    
-    //capture the response and storew it in a variable
-    request.onreadystatechange = function(){
-        if(request.readystate === XMLHttpRequest.DONE){
-            //take some action
-            if(response.status === 200){
-                var counter= request.responseText;
-                var span = document.getElementById('count');
-                span.innerHTML = counter.toString();
-            }
-        }
-        //not done yet
-    };
-    
-    // make the request
-    request.open('GET','http://lohith038.imad.hasura-app.io/counter',true);
-    request.send(null);
-};
+app.get('/:articleName',function (req, res){
+    var articleName=req.params.articleName;
+   res.send(createTemplate(articles[articleName])); 
+});
 
-//submit name
-var nameInput=document.getElementById('name');
-var name=nameInput.value;
-var submit=document.getElementById('submit_btn');
-submit.onclick=function(){
-  //make a request to the server and send the name
-  
-  //capture a list of names and render it as a list
-  var names=['name1','name2','name3','name4'];
-  var list='';
-  for(var i=0;i<names.length;i++){
-      list+='<li>'+names[i]+'</li>';
-  }
-  var ul=document.getElementById('namelist');
-  ul.innerHTML=list;
-};
+app.get('/ui/style.css',function (req, res){
+   res.sendFile(path.join(__dirname,'ui','style.css')); 
+});
+
+app.get('/ui/main.js',function (req, res){
+   res.sendFile(path.join(__dirname,'ui','main.js')); 
+});
+
+app.get('/ui/madi.png',function (req, res){
+   res.sendFile(path.join(__dirname,'ui','madi.png')); 
+});
+
+var port=80;
+app.listen(port, function(){
+    console.log('IMAD course app listening on port  ${port}!');
+});
